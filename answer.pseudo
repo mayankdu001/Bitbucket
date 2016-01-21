@@ -1,0 +1,16 @@
+import java.util.concurrent.ThreadLocalRandom;
+public class randon{
+	public static void main(String[] args) {
+		randon obj =new randon();
+		int num=obj.randInt(6,15);
+		log("Random Number : ");
+		System.out.println(num);
+	}
+	public static int randInt(int min,int max){
+		int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
+		return randomNum;
+	}
+	public static void log(String msg){
+		System.out.println(msg);
+	}
+}
